@@ -124,14 +124,8 @@ func addStairs(_ gameField: inout [[String]], _ size: Int, _ strairsCount: Int) 
 //функция начала игры
 func startGame(_ gameField: inout [[String]], _ size: Int, _ playersCount: Int, _ snakePositions: inout [String: [Int]], _ stairsPositions: inout[String: [Int]]) -> Void {
     
-    var playersPositions: [[Int]] = [
-        [0, 0],
-        [0, 0],
-        [0, 0],
-        [0, 0],
-        [0, 0],
-        [0, 0]
-    ]
+    var playersPositions = Array(repeating: [0, 0], count: n)
+    
     printGameRules()
     while(true){
         printGameField(gameField)
